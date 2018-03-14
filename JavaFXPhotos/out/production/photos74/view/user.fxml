@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+    <children>
+        <SplitPane dividerPositions="0.10535117056856187" layoutX="28.0" layoutY="29.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <BorderPane prefHeight="59.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <right>
+                                <HBox prefHeight="60.0" prefWidth="69.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Button fx:id="userLogoffButton" mnemonicParsing="false" onAction="#userLogoff" prefHeight="77.0" prefWidth="74.0" text="Logout" />
+                                    </children>
+                                </HBox>
+                            </right>
+                            <center>
+                                <HBox prefHeight="59.0" prefWidth="121.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <Button fx:id="createAlbumButton" mnemonicParsing="false" onAction="#addAlbum" prefHeight="59.0" prefWidth="183.0" text="Create Album" textAlignment="CENTER" />
+                              <TextField fx:id="renameField" prefHeight="95.0" prefWidth="162.0" promptText="Rename Selected Album" />
+                                        <Button fx:id="renameAlbumButton" mnemonicParsing="false" onAction="#renameAlbum" prefHeight="60.0" prefWidth="120.0" text="Rename Album" />
+                                    </children>
+                                </HBox>
+                            </center>
+                            <left>
+                                <TextField fx:id="albumField" prefHeight="59.0" prefWidth="173.0" promptText="Enter New Album Name" BorderPane.alignment="CENTER" />
+                            </left>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <BorderPane layoutX="131.0" layoutY="101.0" prefHeight="531.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <center>
+                                <ListView fx:id="albumListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                            </center>
+                            <right>
+                                <VBox BorderPane.alignment="CENTER">
+                                    <children>
+                              <Button fx:id="openAlbumButton" mnemonicParsing="false" onAction="#toPhotoList" prefHeight="60.0" prefWidth="120.0" text="Open Album" />
+                                        <Button fx:id="delAlbumButton" mnemonicParsing="false" onAction="#deleteAlbum" prefHeight="60.0" prefWidth="120.0" text="Delete Album" />
+                                    </children>
+                                </VBox>
+                            </right>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
